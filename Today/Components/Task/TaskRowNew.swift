@@ -10,7 +10,7 @@ import SwiftUI
 struct TaskRowNew: View {
     @EnvironmentObject var modelData: ModelData
     @State var newTaskName: String = ""
-    var project: Project = Project.defaultProject()
+    var project: Project
     
     var body: some View {
         HStack {
@@ -19,9 +19,10 @@ struct TaskRowNew: View {
                 .imageScale(.large)
             TextField("New Task", text: $newTaskName)
                 .onSubmit {
-                    modelData.tasks.append(
-                        Task(name: self.newTaskName, projectId: project.id)
-                    )
+                    var newTask = Task.emptyTask()
+                    newTask.name = newTaskName
+                    newTask.projectId = project.id
+                    modelData.tasks.append(newTask)
                     newTaskName = ""
                 }
                 .textInputAutocapitalization(.never)
@@ -30,7 +31,8 @@ struct TaskRowNew: View {
 }
 
 struct TaskRowNew_Previews: PreviewProvider {
+    static let modelData = ModelData()
     static var previews: some View {
-        TaskRowNew()
+        TaskRowNew(project: modelData.projects[0])
     }
 }

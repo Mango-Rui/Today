@@ -18,10 +18,6 @@ struct TodayApp: App {
                     .tabItem {
                         Label("Today", systemImage: "sunrise.circle")
                     }
-                ProjectView()
-                    .tabItem {
-                        Label("Project", systemImage: "folder")
-                    }
                 TaskView()
                     .tabItem{
                         Label("Task", systemImage: "list.bullet")

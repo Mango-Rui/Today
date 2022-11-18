@@ -8,19 +8,21 @@
 import Foundation
 
 struct Project: Hashable, Codable, Identifiable {
-    var id: Int
+    var id: String = UUID().uuidString
     var name: String = ""
     var isCompleted: Bool = false
     var tasks: [Task] = []
     var taskCount: Int { tasks.count }
-    var isShowTasksInTaskView: Bool = false
+    
     
     static func emptyProject() -> Project {
-        return Project(id: 0)
+        return Project()
     }
     
-    static func defaultProject() -> Project {
-        return Project(id: 0, name: "default", isCompleted: false)
+    static func createByName(name: String) -> Project {
+        var project = Project()
+        project.name = name
+        return project
     }
     
     static func == (lhs: Project, rhs: Project) -> Bool {

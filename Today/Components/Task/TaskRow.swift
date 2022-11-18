@@ -11,7 +11,7 @@ import SwiftUI
 struct TaskRow: View {
     @EnvironmentObject var modelData: ModelData
     @Namespace var namespace
-    @Binding var task: Task
+    var task: Task
     
     var taskIndex: Int {
         modelData.tasks.firstIndex(of: task)!
@@ -22,8 +22,17 @@ struct TaskRow: View {
             NavigationLink {
                 TaskDetail(task: task)
             } label: {
-                playBtn
-                Text(task.name)
+                HStack {
+                    playBtn
+                        .padding(.top, 8)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(task.name)
+                        Text("\(task.focusTime) min")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                    }
+                    .multilineTextAlignment(.leading)
+                }
             }
             .swipeActions(allowsFullSwipe: false) {
                 checkBtn
@@ -35,24 +44,29 @@ struct TaskRow: View {
     
     var checkBtn: some View {
         Button {
-            task.isCompleted.toggle()
+            modelData.tasks[taskIndex].isCompleted.toggle()
         } label: {
-            Label("complete", systemImage: task.isCompleted ? "checkmark" : "checkmark")
+            Label("complete", systemImage: task.isCompleted ? "gobackward" : "checkmark")
         }
-        .tint(task.isCompleted ? .purple.opacity(0.5) : .green.opacity(0.5))
+        .tint(task.isCompleted ? .purple : .green)
     }
     
     var playBtn: some View {
-        Image(systemName: task.isCompleted ? "checkmark.circle" : "play.circle")
-            .foregroundColor(task.isCompleted ? Color.green : Color.purple)
-            .imageScale(.large)
-            .onTapGesture {
-                
-            }
+        VStack {
+            Image(systemName: task.isCompleted ? "checkmark.circle" : "play.circle")
+                .foregroundColor(task.isCompleted ? Color.green : Color.purple)
+                .imageScale(.large)
+                .onTapGesture {
+                    
+                }
+            Spacer()
+        }
     }
     
     var deleteBtn: some View {
-        Button{} label: {
+        Button{
+            modelData.tasks.remove(at: taskIndex)
+        } label: {
             Label("Delete", systemImage: "trash")
         }
         .tint(.red)
@@ -61,11 +75,11 @@ struct TaskRow: View {
 
 
 
-//struct TaskRow_Previews: PreviewProvider {
-//    static let modelData = ModelData()
-//
-//    static var previews: some View {
-//        var $task = modelData.tasks[0]
-//        TaskRow(task: $task)
-//    }
-//}
+struct TaskRow_Previews: PreviewProvider {
+    static let modelData = ModelData()
+
+    static var previews: some View {
+        let task = modelData.tasks[0]
+        TaskRow(task: task)
+    }
+}

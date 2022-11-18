@@ -8,11 +8,13 @@
 import Foundation
 
 struct Task: Hashable, Codable, Identifiable {
-    var id: UUID = UUID()
+    var id: String = UUID().uuidString
     var name: String = ""
     var isCompleted: Bool = false
-    var projectId: Int = 0
+    var projectId: String = "0"
+    var date: Int = 0
     var focusTime: Int = 0
+    
     
     
     static func emptyTask() -> Task {

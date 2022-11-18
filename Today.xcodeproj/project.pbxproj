@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42700592927AED700CAE215 /* TaskSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42700582927AED700CAE215 /* TaskSection.swift */; };
 		C456BCDF2922863F000D9EE8 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C456BCDE2922863F000D9EE8 /* TodayView.swift */; };
 		C456BCE32923010F000D9EE8 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C456BCE22923010F000D9EE8 /* CalendarView.swift */; };
 		C456BCEB292303C6000D9EE8 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C456BCEA292303C6000D9EE8 /* TaskView.swift */; };
@@ -19,9 +20,8 @@
 		C4698F652921D58F00FCFDBF /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4698F642921D58F00FCFDBF /* ModelData.swift */; };
 		C4698F672921D79100FCFDBF /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4698F662921D79100FCFDBF /* TaskRow.swift */; };
 		C4698F692921DB3900FCFDBF /* TaskRowNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4698F682921DB3900FCFDBF /* TaskRowNew.swift */; };
+		C475F7F629273A0F00C4E2E1 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475F7F529273A0F00C4E2E1 /* Animations.swift */; };
 		C49A894029223E7E0024419D /* TaskEditorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A893F29223E7E0024419D /* TaskEditorConfig.swift */; };
-		C49A8942292240880024419D /* TaskEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A8941292240880024419D /* TaskEditor.swift */; };
-		C49A8944292242B90024419D /* TaskEditorForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A8943292242B90024419D /* TaskEditorForm.swift */; };
 		C4A16E66292347F6000FD3A9 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A16E65292347F6000FD3A9 /* Project.swift */; };
 		C4A7499B29244FCF000A2C37 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A7499A29244FCF000A2C37 /* ProjectView.swift */; };
 		C4A7499D29245110000A2C37 /* ProjectRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A7499C29245110000A2C37 /* ProjectRow.swift */; };
@@ -34,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C42700582927AED700CAE215 /* TaskSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSection.swift; sourceTree = "<group>"; };
 		C456BCDE2922863F000D9EE8 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		C456BCE22923010F000D9EE8 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		C456BCEA292303C6000D9EE8 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
@@ -47,9 +48,8 @@
 		C4698F642921D58F00FCFDBF /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		C4698F662921D79100FCFDBF /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		C4698F682921DB3900FCFDBF /* TaskRowNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowNew.swift; sourceTree = "<group>"; };
+		C475F7F529273A0F00C4E2E1 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		C49A893F29223E7E0024419D /* TaskEditorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditorConfig.swift; sourceTree = "<group>"; };
-		C49A8941292240880024419D /* TaskEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditor.swift; sourceTree = "<group>"; };
-		C49A8943292242B90024419D /* TaskEditorForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditorForm.swift; sourceTree = "<group>"; };
 		C4A16E65292347F6000FD3A9 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		C4A7499A29244FCF000A2C37 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		C4A7499C29245110000A2C37 /* ProjectRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRow.swift; sourceTree = "<group>"; };
@@ -78,9 +78,8 @@
 				C4A749AB2926EEC6000A2C37 /* CountDown.swift */,
 				C4698F662921D79100FCFDBF /* TaskRow.swift */,
 				C4698F682921DB3900FCFDBF /* TaskRowNew.swift */,
-				C49A8941292240880024419D /* TaskEditor.swift */,
-				C49A8943292242B90024419D /* TaskEditorForm.swift */,
 				C4A749A029246024000A2C37 /* TaskDetail.swift */,
+				C42700582927AED700CAE215 /* TaskSection.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -118,12 +117,12 @@
 		C4698F432921ADF000FCFDBF /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				C4698F442921ADF000FCFDBF /* TodayApp.swift */,
 				C4A749A32925BD4B000A2C37 /* Navigation */,
 				C4698F552921CFAD00FCFDBF /* Views */,
 				C4A749A22925BCE7000A2C37 /* Components */,
 				C4698F612921D50D00FCFDBF /* Model */,
 				C4A749A42925BD5B000A2C37 /* Styles */,
-				C4698F442921ADF000FCFDBF /* TodayApp.swift */,
 				C4698F462921ADF000FCFDBF /* ContentView.swift */,
 				C4698F482921ADF100FCFDBF /* Assets.xcassets */,
 				C4698F4A2921ADF100FCFDBF /* Preview Content */,
@@ -203,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				C4A749A52925C666000A2C37 /* AnimationFontModifier.swift */,
+				C475F7F529273A0F00C4E2E1 /* Animations.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -280,8 +280,8 @@
 				C4A749A82925CCA9000A2C37 /* StatisticsCard.swift in Sources */,
 				C4698F692921DB3900FCFDBF /* TaskRowNew.swift in Sources */,
 				C4A7499F29245FFE000A2C37 /* ProjectDetail.swift in Sources */,
-				C49A8942292240880024419D /* TaskEditor.swift in Sources */,
 				C456BCE32923010F000D9EE8 /* CalendarView.swift in Sources */,
+				C42700592927AED700CAE215 /* TaskSection.swift in Sources */,
 				C456BCEB292303C6000D9EE8 /* TaskView.swift in Sources */,
 				C49A894029223E7E0024419D /* TaskEditorConfig.swift in Sources */,
 				C4A749AA29264B10000A2C37 /* TodayDetail.swift in Sources */,
@@ -297,8 +297,8 @@
 				C4698F472921ADF000FCFDBF /* ContentView.swift in Sources */,
 				C4698F452921ADF000FCFDBF /* TodayApp.swift in Sources */,
 				C4A7499B29244FCF000A2C37 /* ProjectView.swift in Sources */,
-				C49A8944292242B90024419D /* TaskEditorForm.swift in Sources */,
 				C456BCED292317D4000D9EE8 /* UserView.swift in Sources */,
+				C475F7F629273A0F00C4E2E1 /* Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,12 +309,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"$(inherited)",
+				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_LINK_OBJC_RUNTIME = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -358,7 +363,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"${inherited}",
+					"-framework",
+					UIKit,
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -375,6 +386,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_LINK_OBJC_RUNTIME = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -412,6 +424,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

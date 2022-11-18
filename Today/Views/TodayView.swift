@@ -9,6 +9,12 @@ import SwiftUI
 
 struct TodayView: View {
     var body: some View {
+        tabView
+        
+        
+    }
+    
+    var tabView: some View {
         TabView {
             ForEach(0..<5) { item in
                 GeometryReader { proxy in
