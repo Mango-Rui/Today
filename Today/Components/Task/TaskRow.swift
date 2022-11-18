@@ -37,7 +37,7 @@ struct TaskRow: View {
         Button {
             task.isCompleted.toggle()
         } label: {
-            Label("complete", systemImage: task.isCompleted ? "checkmark")
+            Label("complete", systemImage: task.isCompleted ? "checkmark" : "checkmark")
         }
         .tint(task.isCompleted ? .purple.opacity(0.5) : .green.opacity(0.5))
     }
