@@ -9,20 +9,28 @@ import SwiftUI
 
 struct TaskView: View {
     @EnvironmentObject var modelData: ModelData
+    @StateObject var clock = ClockViewModel()
+    @AppStorage("showClock") var showClock = false
+    
     
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(modelData.projects) { project in
-                    ProjectSection(project: project)
+        ZStack {
+            NavigationStack {
+                List {
+                    ForEach(modelData.projects) { project in
+                        ProjectSection(project: project)
+                    }
+                    NewProjectSection()
                 }
-                
-                NewProjectSection()
-                
+                .listStyle(.insetGrouped)
+                .navigationTitle("Tasks")
             }
-            .listStyle(.insetGrouped)
-            .navigationTitle("Tasks")
+            if showClock {
+                ClockView()
+                    .environmentObject(clock)
+            }
         }
+        
     }
     
     private struct ProjectSection: View {

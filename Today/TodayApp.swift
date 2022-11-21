@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct TodayApp: App {
     @StateObject var modelData = ModelData()
+    var notificationHandler = NotificationHandler.shared
     var body: some Scene {
         #if os(iOS)
         WindowGroup {

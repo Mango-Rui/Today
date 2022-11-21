@@ -20,4 +20,8 @@ struct Task: Hashable, Codable, Identifiable {
     static func emptyTask() -> Task {
         return Task()
     }
+
+    mutating func addFocusTime(by minutes: Int) {
+        self.focusTime += minutes
+    }
 }

@@ -12,7 +12,10 @@ struct TaskRow: View {
     @EnvironmentObject var modelData: ModelData
     @Namespace var namespace
     var task: Task
-    
+    @AppStorage("showClock") var showClock = false
+    @AppStorage("currentTask") var currentTask = ""
+
+
     var taskIndex: Int {
         modelData.tasks.firstIndex(of: task)!
     }
@@ -32,6 +35,7 @@ struct TaskRow: View {
                             .foregroundColor(.secondary)
                     }
                     .multilineTextAlignment(.leading)
+                    
                 }
             }
             .swipeActions(allowsFullSwipe: false) {
@@ -56,10 +60,11 @@ struct TaskRow: View {
             Image(systemName: task.isCompleted ? "checkmark.circle" : "play.circle")
                 .foregroundColor(task.isCompleted ? Color.green : Color.purple)
                 .imageScale(.large)
-                .onTapGesture {
-                    
-                }
             Spacer()
+        }
+        .onTapGesture {
+            showClock.toggle()
+            currentTask = self.task.id
         }
     }
     
