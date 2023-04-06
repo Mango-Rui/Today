@@ -40,8 +40,8 @@ struct TodayDetail: View {
     }
 }
 
-struct TodayDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        TodayDetail()
-    }
-}
+//struct TodayDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TodayDetail()
+//    }
+//}

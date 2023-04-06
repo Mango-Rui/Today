@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StatisticsCard: View {
+struct TodayCard: View {
     var cardNumber: Int
     
     var body: some View {
@@ -31,8 +31,8 @@ struct StatisticsCard: View {
     }
 }
 
-struct StatisticsCard_Previews: PreviewProvider {
-    static var previews: some View {
-        StatisticsCard(cardNumber: 0)
-    }
-}
+//struct StatisticsCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StatisticsCard(cardNumber: 0)
+//    }
+//}

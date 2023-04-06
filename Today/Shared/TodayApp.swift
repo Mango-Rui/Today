@@ -9,8 +9,9 @@ import SwiftUI
 
 @main
 struct TodayApp: App {
-    @StateObject var modelData = ModelData()
-    var notificationHandler = NotificationHandler.shared
+    @Environment(\.scenePhase) var scenePhase
+    @StateObject var coreDataStack = CoreDataStack()
+
     var body: some Scene {
         #if os(iOS)
         WindowGroup {
@@ -21,7 +22,7 @@ struct TodayApp: App {
                     }
                 TaskView()
                     .tabItem{
-                        Label("Task", systemImage: "list.bullet")
+                        Label("Todos", systemImage: "list.bullet")
                     }
                 CalendarView()
                     .tabItem {
@@ -32,7 +33,15 @@ struct TodayApp: App {
                         Label("Settings", systemImage: "person")
                     }
             }
-            .environmentObject(modelData)
+            .environmentObject(coreDataStack)
+            .environment(\.managedObjectContext, coreDataStack.viewContext)
+            .onChange(of: scenePhase) { _ in
+                coreDataStack.viewContext.saveChanges()
+            }
+            .onAppear {
+//                coreDataStack.addTasks()
+            }
+           
         }
         #elseif os(macOS)
         WindowGroup {
